@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/champ-isaac/microservices-proto/payment";
+
+message CreatePaymentRequest {
+  float price = 1;
+  float vat = 2;
+}
+
+message CreatePaymentResponse {
+  float total_price = 1;
+}
+
+service Payment {
+  rpc CreatePayment(CreatePaymentRequest) returns (CreatePaymentResponse){};
+}
