@@ -16,6 +16,10 @@ cd ../../
 git config --global user.email "isaac@championtek.com.tw"
 git config --global user.name "Isaac Cheng"
 git add . && git commit -am "Add/Update golang/${SERVICE_NAME} proto files" || true
+
+echo "Create tag golang/${SERVICE_NAME}/${RELEASE_VERSION}"
 git tag -fa golang/${SERVICE_NAME}/${RELEASE_VERSION} \
   -m "golang/${SERVICE_NAME}/${RELEASE_VERSION}"
+
+echo "Push tag golang/${SERVICE_NAME}/${RELEASE_VERSION}"
 git push origin refs/tags/golang/${SERVICE_NAME}/${RELEASE_VERSION}
