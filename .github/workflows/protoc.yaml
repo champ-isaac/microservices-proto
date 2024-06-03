@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         matrix:
-            server: ["order", "payment", "shipping"]
+            service: ["order", "payment", "shipping"]
     steps:
       - name: "Install Go"
         uses: actions/setup-go@v2
