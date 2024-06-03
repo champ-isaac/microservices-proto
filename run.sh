@@ -23,3 +23,5 @@ git tag -fa golang/${SERVICE_NAME}/${RELEASE_VERSION} \
 
 echo "Push tag golang/${SERVICE_NAME}/${RELEASE_VERSION}"
 git push origin refs/tags/golang/${SERVICE_NAME}/${RELEASE_VERSION}
+
+echo "Push to ${SERVICE_NAME}/${RELEASE_VERSION} completed."
